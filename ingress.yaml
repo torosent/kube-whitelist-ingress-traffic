@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: jenkins-ingress  
+  annotations:    
+    kubernetes.io/ingress.class: traefik
+    ingress.kubernetes.io/whitelist-source-range: "64.18.13.199/32,44.18.13.209/32"
+spec:  
+  rules:
+  - http:
+      paths:      
+      - path: /
+        backend:
+          serviceName: jenkins-jenkins
+          servicePort: 8080
