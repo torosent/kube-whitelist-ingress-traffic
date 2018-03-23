@@ -1,6 +1,7 @@
-# Jenkins deployment in Kubernetes with whitelist IP's using Traefik ingress controller
+# Whitelist ingress traffic to Kubernetes
+## Example of a Jenkins deployment with ClusterIP using Traefik ingress controller to whitelist specific IP's
 
-These instructions enable to create a Jenkins deployment with ClusterIP (Not exposed via LoadBalancer) and expose it only to selected public IP's via Traefik ingress controller.
+These instructions enable to create a Jenkins deployment with ClusterIP (Not exposed via LoadBalancer) and expose it to selected public IP's via Traefik ingress controller.
 
 ### Install Jenkins with ClusterIP service
 `$ helm install jenkins-release --set Master.ServiceType=ClusterIP stable/jenkins`
