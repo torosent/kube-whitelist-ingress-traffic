@@ -14,6 +14,7 @@ These instructions enable to create a Jenkins deployment with ClusterIP (Not exp
 
 ### Edit ingress.yaml 
 Set the public ip's or range to whitelist. 
+
 Single IP: `ingress.kubernetes.io/whitelist-source-range: "64.18.13.199/32"`
 
 Multiple IP ranges (Cloudflare for example): 
